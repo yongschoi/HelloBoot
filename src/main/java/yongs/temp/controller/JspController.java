@@ -28,6 +28,6 @@ public class JspController {
          
         mav.addObject("value", fruitList);
         
-        return mav;
+        return mav; 
     }
 }
