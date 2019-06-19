@@ -10,7 +10,7 @@ import yongs.temp.db.service.TempService;
 import yongs.temp.db.vo.TempVo;
 
 @RestController
-public class CommonController {
+public class NonJspController {
     @Autowired
     TempService tempService;
 

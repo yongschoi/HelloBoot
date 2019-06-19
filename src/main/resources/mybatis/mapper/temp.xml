@@ -2,6 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="yongs.temp.db.mapper.TempMapper">
     <select id="getAll" resultType="yongs.temp.db.vo.TempVo">
-        SELECT * FROM Temp
+        SELECT * FROM temp
     </select>
 </mapper>
