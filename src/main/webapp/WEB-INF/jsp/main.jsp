@@ -6,6 +6,6 @@
 <title>Spring Boot</title>
 </head>
 <body>
-	<h1>테스트 페이지</h1>
+	<h1>main 페이지</h1>
 </body>
 </html>

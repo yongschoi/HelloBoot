@@ -13,11 +13,6 @@ import yongs.temp.db.vo.TempVo;
 public class NonJspController {
     @Autowired
     TempService tempService;
-
-    @RequestMapping("/")
-    public String root_test() throws Exception{
-        return "Hello Root(/)";
-    }
     
     @RequestMapping("/query")
     public List<TempVo> query() throws Exception{
