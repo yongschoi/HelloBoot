@@ -5,13 +5,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Spring Boot ::: LOG IN</title>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/scripts/jquery-3.2.1.min.js"></script>
-<script type="text/javascript"> 
-	// 한글입력 방지
-	$(document).ready(function(){
-		$("input[name=username]").keyup(function(event){ 
-			if (!(event.keyCode >=37 && event.keyCode<=40)) {
+<script>
+	$(document).ready(function() {
+		$("input[name=username]").keyup(function(event) {
+			if (!(event.keyCode >= 37 && event.keyCode <= 40)) {
 				var inputVal = $(this).val();
-				$(this).val(inputVal.replace(/[^a-z0-9]/gi,''));
+				$(this).val(inputVal.replace(/[^a-z0-9]/gi, ''));
 			}
 		});
 	});
@@ -79,11 +78,11 @@ span.psw {
 </style>
 <body>
 	<form action="${pageContext.request.contextPath}/login" method="post">
-		<div class="container">			
-			<label><b>Username</b></label>
-			<input type="text" placeholder="Enter Username" id="username" name="username" required /> 
-			<label><b>Password</b></label> 
-			<input type="password" placeholder="Enter Password" id="password" name="password" required />
+		<div class="container">
+			<label><b>Username</b></label> <input type="text"
+				placeholder="Enter Username" id="username" name="username" required />
+			<label><b>Password</b></label> <input type="password"
+				placeholder="Enter Password" id="password" name="password" required />
 			<button type="submit">Login</button>
 		</div>
 	</form>
@@ -93,8 +92,7 @@ span.psw {
 	<div align="center">
 		<a href="${pageContext.request.contextPath}/user/createPage">사용자등록</a>
 	</div>
-	<br> 
-	:::
+	<br> :::
 	<%=request.getProtocol()%>
 	:::
 </body>
