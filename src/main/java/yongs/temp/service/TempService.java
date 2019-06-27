@@ -1,4 +1,4 @@
-package yongs.temp.db.service;
+package yongs.temp.service;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class TempService {
     @Autowired
     TempMapper tempMapper;
     
-    public List<TempVo> getAll() throws Exception{
+    public List<TempVo> getAll() throws Exception {
         return tempMapper.getAll();
     }
 }

@@ -8,7 +8,7 @@ public class User implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String userName;
+	private String username;
 	private String password;
 	private int enabled;
 	private List<String> userRoles;
@@ -21,17 +21,19 @@ public class User implements Serializable {
 		this.userRoles = userRoles;
 	}
 
-	public User(String userName, String password, int enabled) {
-		this.userName = userName;
+	public User() {}
+	
+	public User(String username, String password, int enabled) {
+		this.username = username;
 		this.password = password;
 		this.enabled = enabled;
 	}
 	
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	
 	public String getPassword() {

@@ -19,8 +19,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 				.excludePathPatterns("/loginPage")
 				.excludePathPatterns("/login")
 				.excludePathPatterns("/user/createPage")
-				.excludePathPatterns("/user/create")
-				.excludePathPatterns("/mav");
+				.excludePathPatterns("/user/create");
 	}
 	
     @Override
