@@ -1,0 +1,46 @@
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port : 8080
+  
+spring:
+  profiles: dev
+  datasource:
+    driverClassName: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://127.0.0.1:3307/boot
+    username: scott
+    password: tiger
+
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+      
+logging:
+  level:
+    yongs:
+      temp: DEBUG   
+
+---
+
+server:
+  port : 8081
+spring:
+  profiles: prod
+  datasource:
+    driverClassName: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://127.0.0.1:3306/boot
+    username: scott
+    password: tiger
+
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+      
+logging:
+  level:
+    yongs:
+      temp: INFO

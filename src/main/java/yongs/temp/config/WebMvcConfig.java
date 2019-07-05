@@ -19,7 +19,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
 				.excludePathPatterns("/loginPage")
 				.excludePathPatterns("/login")
 				.excludePathPatterns("/user/createPage")
-				.excludePathPatterns("/user/create");
+				.excludePathPatterns("/user/create")
+				.excludePathPatterns("/yongs-api/**");
 	}
 	
     @Override

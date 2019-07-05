@@ -4,4 +4,17 @@
     <select id="getAll" resultType="yongs.temp.db.vo.TempVo">
         SELECT * FROM temp
     </select>
+
+    <select id="getId" resultType="yongs.temp.db.vo.TempVo" parameterType="int">
+        SELECT * FROM temp WHERE id = #{id}
+    </select>
+    
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="yongs.temp.db.vo.TempVo">
+    	INSERT INTO temp ( name ) VALUES ( #{name} )
+    </insert>
+
+	<delete id="delete"> 
+		DELETE FROM temp WHERE id = #{id} 
+	</delete>
+
 </mapper>
