@@ -13,6 +13,7 @@
 	<artifactId>HelloBoot</artifactId>
 	<version>0.0.1</version>
 	<name>HelloBoot</name>
+	<packaging>jar</packaging>
 	<description>Demo for Spring Boot</description>
 
 	<properties>
