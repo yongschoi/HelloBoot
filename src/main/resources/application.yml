@@ -26,12 +26,12 @@ logging:
 ---
 
 server:
-  port : 8081
+  port : 8080
 spring:
   profiles: prod
   datasource:
     driverClassName: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://maria-db:3307/boot
+    url: jdbc:mariadb://127.0.0.1:3307/boot
     username: scott
     password: tiger
 
