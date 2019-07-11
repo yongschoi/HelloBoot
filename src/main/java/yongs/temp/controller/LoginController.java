@@ -28,6 +28,14 @@ public class LoginController {
     public String prelogin(HttpServletRequest req) {	
     	return "loginPage";
     }
+  
+    @RequestMapping("/hello")
+    public String hello(HttpServletRequest req, Model model) {
+    	HttpSession session = req.getSession(false);
+    	logger.debug("SESSION ID ==>|" + session.getId() + "|");
+    	model.addAttribute("out", "Hello !!! ");    	
+        return "result";
+    }
     
     @RequestMapping("/login")
     public String login(HttpServletRequest req, Model model) throws Exception {  	
@@ -57,6 +65,18 @@ public class LoginController {
     	model.addAttribute("out", username);
    	
         return "login";
+    }
+
+    @RequestMapping("/logout")
+    public String logout(HttpServletRequest req, Model model) throws Exception {      	
+    	HttpSession session = req.getSession(false);    	
+    	////////////////////////////////////////////////////////////////////////////////////
+    	if(session != null) {
+    		session.removeAttribute("SESSION_USER");
+    		session.invalidate();
+    	}
+
+    	return "redirect: /loginPage";
     }
     
 	@ExceptionHandler({InsufficientException.class}) 
