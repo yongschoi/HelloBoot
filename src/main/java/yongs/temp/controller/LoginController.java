@@ -61,22 +61,26 @@ public class LoginController {
         HttpSession session = req.getSession(false);
     	session.setAttribute("SESSION_USER", user);
     	
-    	logger.debug("SESSION ID ==>|" + session.getId() + "|");
+    	logger.debug("<login> SESSION ID ==>|" + session.getId() + "|");
+    	logger.debug("<login> SESSION_USER ==>|" + session.getAttribute("SESSION_USER") + "|");
     	model.addAttribute("out", username);
    	
         return "login";
     }
 
     @RequestMapping("/logout")
-    public String logout(HttpServletRequest req, Model model) throws Exception {      	
-    	HttpSession session = req.getSession(false);    	
+    public String logout(HttpServletRequest req, Model model) throws Exception {     
+
+    	HttpSession session = req.getSession(false);   
+    	logger.debug("<logout> SESSION ID ==>|" + session.getId() + "|");
+    	logger.debug("<logout> SESSION_USER ==>|" + session.getAttribute("SESSION_USER") + "|");
     	////////////////////////////////////////////////////////////////////////////////////
     	if(session != null) {
     		session.removeAttribute("SESSION_USER");
     		session.invalidate();
     	}
 
-    	return "redirect: /loginPage";
+    	return "redirect:/loginPage";
     }
     
 	@ExceptionHandler({InsufficientException.class}) 
