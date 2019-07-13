@@ -9,7 +9,7 @@ spring:
   profiles: dev
   datasource:
     driverClassName: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://127.0.0.1:3307/boot
+    url: jdbc:mariadb://127.0.0.1:3306/boot
     username: scott
     password: tiger
 
@@ -31,7 +31,7 @@ spring:
   profiles: prod
   datasource:
     driverClassName: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://127.0.0.1:3307/boot
+    url: jdbc:mariadb://127.0.0.1:3306/boot
     username: scott
     password: tiger
 
