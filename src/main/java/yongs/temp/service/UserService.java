@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import yongs.temp.common.SecurityUtil;
 import yongs.temp.db.mapper.UserMapper;
 import yongs.temp.db.mapper.UserRoleMapper;
 import yongs.temp.db.vo.User;

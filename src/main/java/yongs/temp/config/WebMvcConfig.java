@@ -1,12 +1,16 @@
 package yongs.temp.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import yongs.temp.interceptor.LoginInterceptor;
+
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
-	/* Interceptor 예제
+	/* Interceptor 예제 */
 	@Autowired
 	private LoginInterceptor interceptor;
 
@@ -19,7 +23,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 				.excludePathPatterns("/user/create")
 				.excludePathPatterns("/yongs-api/**");
 	}
-	*/
 	
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
